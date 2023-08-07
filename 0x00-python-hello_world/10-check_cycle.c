@@ -7,7 +7,7 @@
  * Return: linked list has cycle 1 else 0
  */
 
-int check_cycle(list_t *list)
+int check_cycle(listint_t *list)
 {
 	listint_t *tortoise = list;
 	listint_t *hare = list;
