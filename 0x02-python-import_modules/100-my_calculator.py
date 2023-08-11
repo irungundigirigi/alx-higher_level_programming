@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
-    from calculator_1 import add, sub, div, mul
-    import sys
 
+    from calculator_1 import add, sub, div, mul
+
+    import sys
     args = sys.argv
     operators = {"+": add, "-": sub, "/": div, "*": mul}
 
@@ -17,4 +18,3 @@ if __name__ == "__main__":
     b = int(args[3])
 
     print("{} {} {} = {}".format(a, args[2], b, operators[args[2]](a,b)))
-
