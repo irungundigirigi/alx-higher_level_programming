@@ -46,7 +46,7 @@ class Square:
         Args: tuple value
         Raises:
             TypeError: if not tuple or tuple has value < 0
-        """ 
+        """
         if not isinstance(value, tuple):
             raise TypeError('position must be a tuple of 2 positive integers')
         if len(value) != 2:
