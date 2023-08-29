@@ -2,6 +2,8 @@
 # 0-square.py by Edwin Irungu
 """Defines a square"""
 
+
+
 class Square:
     """Does nothing"""
     pass
