@@ -71,3 +71,6 @@ class TestSquare_instantiation(unittest.TestCase):
 
     def test_y_getter(self):
         self.assertEqual(0, Square(10).y)
+
+if __name__ == "__main__":
+    unittest.main()
