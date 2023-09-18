@@ -24,16 +24,4 @@ This folder contains the test files and folders for this project.
 
 ### Directory: tests/test_models
 
-This subdirectory has unit tests specifically created for the model folder. Still being Implemented.
-
-#### File: tests/test_base.py
-
-This test case is designed to evaluate the functionality of base.py.
-
-#### File: tests/test_rectangle.py
-
-Similar to test_base.py, this test case focuses on assessing the functionality of rectangle.py.
-
-#### File: tests/test_square.py
-
-This test case assesses the behaviors and functionalities of square.py and the Square class.
+This subdirectory has unit tests specifically created for the model folder.
