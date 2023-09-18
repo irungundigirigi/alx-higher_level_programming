@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+# base.py
+""" Define a base nodel class """
+import json
+import csv
+
 
 class Base:
     __nb_objects = 0
@@ -53,4 +58,34 @@ class Base:
         if json_string is None or json_string == "[]":
             return []
         return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """
+            Returns class instanciated from dict
+        """
+        if dictionary and dictionary != {}:
+            if cls.__name__ == "Rectangle":
+                new = cls(1, 1)
+            else:
+                new = cls(1)
+            new.update(**dictionary)
+            return new
+    @classmethod
+    def load_from_file(cls):
+        """
+            Return a list of classes instantiated from a JSON strings from a file
+            Read from '<cls.__name__>.json'
+
+            Returns:
+                If the file does not exist - an empty list
+                Else - a list of instantiated classes
+        """
+        file = str(cls.__name__) + ".json"
+        try:
+            with open(file, "r") as jsonfile:
+                dict_list = Base.from_json_string(jsonfile.read())
+                return [cls.create(**d) for d in dict_list]
+        except IOError:
+            return []
 
