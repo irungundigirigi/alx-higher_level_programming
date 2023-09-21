@@ -128,7 +128,5 @@ class Base:
         file = str(cls.__name__) + ".json"
         try:
             with open(file, "r") as jsonfile:
-                dict_list = Base.from_json_string(jsonfile.read())
-                return [cls.create(**d) for d in dict_list]
-        except IOError:
-            return []
+                dict_list =
+
