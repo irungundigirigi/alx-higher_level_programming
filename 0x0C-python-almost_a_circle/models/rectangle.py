@@ -54,12 +54,19 @@ class Rectangle(Base):
 
     @property
     def width(self):
-        """Getter method for width."""
+        """
+            Getter method for width.
+            Returns: width
+        """
         return self.__width
 
     @width.setter
     def width(self, value):
-        """Setter method for width."""
+        """
+            Setter function for width.
+            Args:
+                value(int): value to be set
+        """
         if type(value) != int:
             raise TypeError("width must be an integer")
         if value <= 0:
@@ -68,12 +75,18 @@ class Rectangle(Base):
 
     @property
     def height(self):
-        """Getter method for height."""
+        """
+            Getter fn for height.
+        """
         return self.__height
 
     @height.setter
     def height(self, value):
-        """Setter method for height."""
+        """
+            Setter method for height.
+            Args:
+                value(int): value to be set
+        """
         if type(value) != int:
             raise TypeError("height must be an integer")
         if value <= 0:
@@ -87,7 +100,11 @@ class Rectangle(Base):
 
     @x.setter
     def x(self, value):
-        """Setter method for x."""
+        """
+            Setter function for x.
+            Args:
+                value(int): value to be set
+        """
         if type(value) != int:
             raise TypeError("x must be an integer")
         if value < 0:
@@ -96,12 +113,19 @@ class Rectangle(Base):
 
     @property
     def y(self):
-        """Getter method for y."""
+        """
+            Getter method for y.
+            Returns: y
+        """
         return self.__y
 
     @y.setter
     def y(self, value):
-        """Setter method for y."""
+        """
+            setter method for y.
+            Args:
+                value(int): value to be set
+        """
         if type(value) != int:
             raise TypeError("y must be an integer")
         if value < 0:
@@ -109,7 +133,9 @@ class Rectangle(Base):
         self.__y = value
 
     def area(self):
-        """Calculate and return the area of the rectangle."""
+        """
+            Return the area of the rectangle instance.
+        """
         return self.__width * self.__height
 
     def display(self):
@@ -131,14 +157,14 @@ class Rectangle(Base):
 
     def update(self, *args, **kwargs):
         """
-        Update the attributes of the rectangle.
+            Update the attributes of the rectangle.
 
-        Args:
-            *args: Positional arguments (id, width, height, x, y).
-            **kwargs: Keyword arguments.
+            Args:
+                *args: Positional arguments (id, width, height, x, y).
+                **kwargs: Keyword arguments.
 
-        Notes:
-            If positional arguments are present, keyword arguments are ignored.
+            Notes:
+                If positional arguments are present, keyword arguments are ignored.
         """
         if len(args) == 0:
             for key, value in kwargs.items():
@@ -155,7 +181,7 @@ class Rectangle(Base):
 
     def to_dictionary(self):
         """
-        Return a dictionary representation of the rectangle object.
+            Returns the dictionary representation of the rectangle object.
 
         Returns:
             dict: A dictionary containing the attributes of the rectangle.
