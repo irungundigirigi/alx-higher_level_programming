@@ -1,8 +1,10 @@
 #!/usr/bin/python3
 
-# Lists all states with a name starting with uppercase N
-# Username, password, and dabase names given as arguments
-# MySQLdb is an interface for connecting MySQL database server from Python
+"""
+Lists all states with a name starting with uppercase N
+Username, password, and dabase names given as arguments
+MySQLdb is an interface for connecting MySQL database server from Python
+"""
 
 import sys
 import MySQLdb
@@ -21,11 +23,8 @@ if __name__ == "__main__":
                     WHERE name LIKE BINARY 'N%' \
                     ORDER BY states.id ASC")
 
-    # Fetch all rows of the query
     rows = cur.fetchall()
 
     for row in rows:
             print(row)
 
-    cur.close()
-    db.close()
