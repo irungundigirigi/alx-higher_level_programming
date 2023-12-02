@@ -1,6 +1,8 @@
 #!/usr/bin/python3
-""" Displays the X-Request-Id header variable of a request to URL given as argument """
-
+"""
+    Displays the X-Request-Id header variable of a
+    request to URL given as argument
+"""
 import sys
 import urllib.request
 
