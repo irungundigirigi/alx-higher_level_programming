@@ -3,9 +3,7 @@ import sys
 import requests
 
 if __name__ == '__main__':
-    owner = sys.argv[2]
-    repo = sys.argv[1]
-    url = "https://api.github.com/repos/{}/{}/commits".format(owner, repo)
+    url = "https://api.github.com/repos/{}/{}/commits".format(sys.argv[2], sys.argv[1])
 
     res = requests.get(url)
     commits = res.json()
